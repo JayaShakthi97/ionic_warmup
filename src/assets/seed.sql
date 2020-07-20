@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS todo(id INTEGER PRIMARY KEY AUTOINCREMENT,text TEXT,done INTEGER);
+INSERT or IGNORE INTO developer VALUES(1, 'call amma', 0);
+INSERT or IGNORE INTO developer VALUES(2, 'buy shoes', 1);

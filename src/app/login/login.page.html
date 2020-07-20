@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>LogIn</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input [(ngModel)]=username (ionChange)=onTextEdit()></ion-input>
+      </ion-item>
+      <br/>
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input [(ngModel)]=password type='password' (ionChange)=onTextEdit()></ion-input>
+      </ion-item>
+      <br/>
+      <ion-button expand='block' color="success" [disabled]='btnDisabled' (click)="userLogIn()">
+        LogIn
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

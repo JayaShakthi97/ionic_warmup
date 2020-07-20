@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      HomePage
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="container">
+
+    <ion-item>
+      <ion-input type="text" [(ngModel)]=inputText placeholder="Type here">
+      </ion-input>
+      <ion-button (click)="addItem()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+     </ion-item>
+
+     <div id="items">
+        <ion-list>
+          <ion-item *ngFor="let item of todoItems">
+            <ion-label [class.strike] = "item.done" >{{item.text}}</ion-label>
+            <ion-checkbox color="success" slot="start" 
+            [(ngModel)]="item.done" (click)="toggleItem(item.id)"></ion-checkbox>
+            <ion-button color="danger" (click)="removeItem(item.id)">
+              <ion-icon name="remove"></ion-icon>
+            </ion-button>
+          </ion-item>
+      </ion-list>
+     </div>
+
+  </div>
+</ion-content>
